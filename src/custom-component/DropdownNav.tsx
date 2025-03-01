@@ -5,7 +5,6 @@ import {
     ReceiptText,
     Users,
     Settings,
-    UserPen,
   } from "lucide-react";
   import { useState } from "react";
 
