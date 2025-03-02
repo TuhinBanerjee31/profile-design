@@ -21,11 +21,11 @@ const DropdownNav = () => {
     const handleOpenTimer = () => {
       setTimeout(() => {
           setTimer(!timer);
-        }, 150);
+        }, 200);
   } 
 
   return (
-    <div className={`bg-white ${open ? 'w-md h-[55vh] sm:h-[60vh]' : 'w-8 h-7'} md:hidden rounded-r-full p-1 ease-in-out shadow-lg relative z-40 rounded-bl-full transition-all flex justify-center items-center duration-500`}>
+    <div className={`dark:shadow-slate-800 bg-white dark:bg-black ${open ? 'w-md h-[55vh] sm:h-[60vh]' : 'w-14 h-14'} md:hidden rounded-r-full p-1 ease-in-out shadow-lg relative z-40 rounded-bl-full transition-all flex justify-center items-center duration-500`}>
       <div
         className={`${
           open ? "opacity-100" : "opacity-0"
@@ -58,7 +58,7 @@ const DropdownNav = () => {
       </div>
       
       <div className={`h-full flex items-center`}>
-      <AlignJustify size={20} className={`mx-auto cursor-pointer ${open ? 'rotate-90' : 'rotate-0'} transition-all duration-500`} onClick={() => {setOpen(!open); return open ? handleCloseTimer() : handleOpenTimer()}} />
+      <AlignJustify size={30} className={`mx-auto cursor-pointer text-black dark:text-white ${open ? 'rotate-90' : 'rotate-0'} transition-all duration-500`} onClick={() => {setOpen(!open); return open ? handleCloseTimer() : handleOpenTimer()}} />
       </div>
     </div>
   )

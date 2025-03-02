@@ -15,8 +15,8 @@ function App() {
         <div className='w-[100vw] h-[20vh] bg-no-repeat bg-cover' style={{ backgroundImage: `url(${image1})`}}>
           <DropdownNav />
         </div>
-        <div className='grid grid-cols-12 gap-5 ml-3'>
-        <div className='col-span-12 md:col-span-12 lg:col-span-3'><ProfileCard /></div>
+        <div className='grid grid-cols-12 gap-5 md:ml-3 min-h-[80vh] bg-[#FEFEFE] dark:bg-black duration-500'>
+        <div className='col-span-12 md:col-span-12 lg:col-span-3 px-3 md:px-0'><ProfileCard /></div>
         <div className='col-span-12 md:col-span-12 lg:col-span-5 px-6 overflow-hidden'><ScheduleCard /></div>
         <div className='col-span-12 md:col-span-12 lg:col-span-4 pb-10'><FeatureCard /></div>
         </div>

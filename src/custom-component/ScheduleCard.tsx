@@ -41,25 +41,25 @@ const ScheduleCard = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full transition-colors duration-500">
       <div className="py-10">
-        <h5 className="text-lg">Friday, 28 February</h5>
+        <h5 className="text-lg text-black dark:text-white">Friday, 28 February</h5>
         <h1 className="text-[#002A5A] text-3xl font-semibold">
           Good Morning, Levion!
         </h1>
       </div>
 
-      <div className="w-[100%] min-h-[30vh] border-1 border-slate-200 bg-white rounded-lg shadow-lg py-4">
-        <div className="w-[95%] h-10 bg-[#F5F7F8] mx-auto px-3 shadow border border-slate-100 rounded-md flex justify-between">
+      <div className="w-[100%] min-h-[30vh] border-1 border-slate-200 bg-white dark:bg-black rounded-lg shadow-lg dark:shadow-slate-800 py-4">
+        <div className="w-[95%] h-10 bg-[#F5F7F8] dark:bg-slate-900 mx-auto px-3 shadow border border-slate-100 rounded-md flex justify-between">
           <span className="h-full flex items-center gap-2">
-            <CalendarDays />
-            <p className="text-xs md:text-lg">Friday, 28 February 2025</p>
-            <ChevronDown size={14} />
+            <CalendarDays className="text-black dark:text-white" />
+            <p className="text-xs md:text-lg text-black dark:text-white">Friday, 28 February 2025</p>
+            <ChevronDown size={14} className="text-black dark:text-white" />
           </span>
 
           <span className="h-full flex gap-5 items-center">
-            <MoveLeft size={19} />
-            <MoveRight size={19} />
+            <MoveLeft size={19} className="text-black dark:text-white" />
+            <MoveRight size={19} className="text-black dark:text-white" />
           </span>
         </div>
 
@@ -67,18 +67,18 @@ const ScheduleCard = () => {
           <div key={index}>
             <div className="flex items-center w-[100%] gap-3 mt-5 px-4">
               <span className="flex h-full w-[25%] sm:w-[20%] md:w-[15%] flex-col justify-center">
-                <h3 className="text-xs sm:text-base font-semibold">{item.start}</h3>
-                <p className="text-xs">to {item.end}</p>
+                <h3 className="text-xs sm:text-base font-semibold text-black dark:text-white">{item.start}</h3>
+                <p className="text-xs text-black dark:text-white">to {item.end}</p>
               </span>
 
               <span className="h-[5vh] md:h-[6.5vh] border-2 border-[#40DFD0] rounded-full"></span>
 
               <span className="flex h-full w-[75%] sm:w-[80%] md:w-[85%] flex-col justify-center">
                 <span className="flex items-center gap-1">
-                  <p className="text-xs">{item.status}</p>{" "}
+                  <p className="text-xs text-black dark:text-white">{item.status}</p>{" "}
                   <Video size={18} color={`${item.status == 'Live' ? 'red' : 'blue'}`} />
                 </span>
-                <h3 className="text-base md:text-xl font-semibold">{item.title}</h3>
+                <h3 className="text-base md:text-xl font-semibold text-black dark:text-white">{item.title}</h3>
               </span>
             </div>
 
